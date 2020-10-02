@@ -1,8 +1,13 @@
 import React from 'react';
+import Login from './Components/Login/login';
 
-const App = () => {
-  return <div>App React</div>;
-};
+function App() {
+  return (
+    <>
+      <Login />
+    </>
+  );
+
+}
 
 export default App;
-
