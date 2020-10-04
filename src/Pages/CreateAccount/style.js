@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
-import Imagem from '../../Assets/login.svg';
+import Imagem from '../../Assets/create.svg';
 
 
 
@@ -86,12 +86,13 @@ button{
     cursor: pointer;
     margin: 0 80px 0 80px;
     padding: 8px;
+    margin-top: 5px;
 }
 `;
 
 // REMEMBER
 
-export const Remember = styled.div`
+export const Terms = styled.div`
 display: flex;
 align-items: center;
 
@@ -105,15 +106,14 @@ color: #fff;
 
 // FORGOT
 
-export const Forgot = styled.div`
+export const Log = styled.div`
 display: flex;
 justify-items: center;
 align-items: center;;
-padding-top: 30px;
+padding-top: 40px;
 
 span{
 font-size: 12px;
-font-weight: bold;
 padding-right: 10px;
 padding-left: 65px;
 }
@@ -125,28 +125,6 @@ text-decoration:none;
 }
 `;
 
-// CREATE ACOUNT
-
-export const CreateAcount = styled.div`
-display: flex;
-justify-items: center;
-align-items: center;;
-padding-top: 20px;
-
-span{
-font-size: 12px;
-font-weight: bold;
-padding-right: 10px;
-padding-left: 68px;
-}
-
-a{
-font-size: 12px;
-color: #fff;
-text-decoration:none; 
-}
-`; 
-
 /* COLUNA IMAGEM */
 
 export const SecondColumn = styled.div`
@@ -155,4 +133,7 @@ height: 100%;
 border-radius: 15px;
 background-image: url(${Imagem});
 background-repeat: no-repeat;
+position: absolute;
+top: 111px;
+left: 640px;
 `;

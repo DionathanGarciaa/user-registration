@@ -1,30 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { Container, FirstContent, FirstColumn, Remember, Forgot, CreateAcount, SecondColumn } from  './style';
-import { ImUser } from 'react-icons/im';
+import { Link } from 'react-router-dom';
 
 function Login() {
-    const [nome, setNome] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+
     const [login, setLogin] = useState('');
     const [passwordLogin, setPasswordLogin] = useState('');
     const [checkbox, setCheckbox] = useState('');
 
-    return (
+       return (
 
         <Container>
 
             <FirstContent>
                 
-                     <FirstColumn>
-                        <h2>Welcome</h2>
+                    <FirstColumn>
+                        <h2>Login</h2>
                         
                         <form>
                             <label htmlFor="login"></label>
                              
                                 <input
                                  id="login"
-                                 icon={ImUser}
                                  type="email"
                                  placeholder= "Username"
                                  value={login}
@@ -41,26 +38,29 @@ function Login() {
                                 />
 
                                 <Remember>
-                                <input 
+                                 <input 
                                  id="checkbox"
                                  type="checkbox"
                                  value={checkbox}
                                  onChange={(event) => setCheckbox(event.target.value)}
                                  /> 
                                  <label htmlFor="checkbox">Remember</label>
-                               </Remember>
+                                </Remember>
 
-                               <button>Sign in</button>
+                               <button to="/Home">Sign in</button>
                                
                                 <Forgot>
-                                 <span>Forgot</span>
-                                 <a href="#">Username / password?</a>
+                                    <span>Forgot</span>
+                                    <Link to="#">
+                                     <strong>Username / password?</strong>
+                                    </Link>
                                 </Forgot>
 
                                 <CreateAcount>
-                                <span>Create an account?</span>
-                                <a href="#">Sign up</a>
-
+                                    <span>Create an account?</span>
+                                    <Link to="/CreateAccount">
+                                     <strong>Sign up</strong>
+                                    </Link>
                                 </CreateAcount>
                         </form>
                     </FirstColumn>
