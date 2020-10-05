@@ -1,8 +1,9 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import CreateAccount from "../Pages/CreateAccount";
 import Login from '../Pages/Login/index';
 import Home from '../Pages/Home/index';
+import Forgot from '../Pages/ForgotPassword/index';
+import CreateAccount from "../Pages/CreateAccount";
 
 
 function Routes() {
@@ -11,9 +12,11 @@ function Routes() {
 
         <Switch>
             
-            <Route path={"/Login"} component={Login} />
-            <Route path={"/CreateAccount"} component={CreateAccount} />
+            <Route path={"/Login"} exact component={Login} />
             <Route path={"/Home"} component={Home} />
+            <Route path={"/Forgot"} component={Forgot} />
+            <Route path={"/CreateAccount"} component={CreateAccount} />
+
 
 
         </Switch>

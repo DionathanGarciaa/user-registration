@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Container, FirstContent, FirstColumn, Remember, Forgot, CreateAcount, SecondColumn } from  './style';
+import React, { useState } from 'react';
+import { Container, FirstContent, FirstColumn, Remember, MyButton, Forgot, CreateAccount, SecondColumn } from  './style';
 import { Link } from 'react-router-dom';
 
 function Login() {
@@ -47,21 +47,25 @@ function Login() {
                                  <label htmlFor="checkbox">Remember</label>
                                 </Remember>
 
-                               <button to="/Home">Sign in</button>
-                               
+                                <MyButton>
+                                    <Link to="/Home">
+                                     <button>Sign in</button>
+                                    </Link>
+                                </MyButton>
+
                                 <Forgot>
                                     <span>Forgot</span>
-                                    <Link to="#">
+                                    <Link to="/Forgot">
                                      <strong>Username / password?</strong>
                                     </Link>
                                 </Forgot>
 
-                                <CreateAcount>
+                                <CreateAccount>
                                     <span>Create an account?</span>
                                     <Link to="/CreateAccount">
                                      <strong>Sign up</strong>
                                     </Link>
-                                </CreateAcount>
+                                </CreateAccount>
                         </form>
                     </FirstColumn>
 

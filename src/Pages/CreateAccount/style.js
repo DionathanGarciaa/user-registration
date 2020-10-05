@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
-import Imagem from '../../Assets/create.svg';
+import Imagem from '../../Assets/imagem.svg';
 
 
 
@@ -26,9 +26,55 @@ background-color: #393e46;
 box-shadow: 4px 3px 3px ${darken(0.1, "#000")};
 `;
 
-// COLUNA LOGIN
+// COLUNA CREATE ACCOUNT
 
 export const FirstColumn = styled.div`
+width: 50%;
+height: 100%;
+border-radius: 15px;
+background-image: url(${Imagem});
+background-repeat: no-repeat;
+`;
+
+// TERMS
+
+export const Terms = styled.div`
+display: flex;
+align-items: center;
+
+
+label{
+font-size: 12px;
+padding-bottom: 4px;
+
+color: #fff;
+}
+`;
+
+// LOG IN
+
+export const Log = styled.div`
+display: flex;
+justify-items: center;
+align-items: center;;
+padding-top: 40px;
+
+span{
+font-size: 12px;
+padding-right: 10px;
+padding-left: 90px;
+}
+
+a{
+font-size: 12px;
+color: #fff;
+text-decoration:none; 
+}
+`;
+
+/* COLUNA IMAGEM */
+
+export const SecondColumn = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
@@ -88,52 +134,4 @@ button{
     padding: 8px;
     margin-top: 5px;
 }
-`;
-
-// REMEMBER
-
-export const Terms = styled.div`
-display: flex;
-align-items: center;
-
-
-label{
-font-size: 12px;
-padding-bottom: 4px;
-color: #fff;
-}
-`;
-
-// FORGOT
-
-export const Log = styled.div`
-display: flex;
-justify-items: center;
-align-items: center;;
-padding-top: 40px;
-
-span{
-font-size: 12px;
-padding-right: 10px;
-padding-left: 65px;
-}
-
-a{
-font-size: 12px;
-color: #fff;
-text-decoration:none; 
-}
-`;
-
-/* COLUNA IMAGEM */
-
-export const SecondColumn = styled.div`
-width: 50%;
-height: 100%;
-border-radius: 15px;
-background-image: url(${Imagem});
-background-repeat: no-repeat;
-position: absolute;
-top: 111px;
-left: 640px;
 `;

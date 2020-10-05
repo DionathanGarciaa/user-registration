@@ -17,6 +17,10 @@ function CreateAccount() {
             <FirstContent>
                 
                     <FirstColumn>
+                        {/* imagem */}
+                    </FirstColumn>
+
+                    <SecondColumn>
                         <h2>CREATE ACCOUNT</h2>
                         
                         <form>
@@ -64,23 +68,20 @@ function CreateAccount() {
                                      value={checkbox}
                                      onChange={(event) => setCheckbox(event.target.value)}
                                     /> 
-                                    <label htmlFor="checkbox">I agree to the Terms of User</label>
+                                    <label htmlFor="checkbox">I agree to the Terms of user</label>
                                 </Terms>
 
                                <button>Sign up</button>
                                
                                <Log>
+                                   
                                     <span>already have an account?</span>
-                                    <Link to="#">
+                                    <Link to="/Login">
                                      <strong>log in!</strong>
                                     </Link>
                                 </Log>
 
                         </form>
-                    </FirstColumn>
-
-                    <SecondColumn>
-                    {/* imagem */}
                     </SecondColumn>
 
             </FirstContent>

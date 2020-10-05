@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
-import Imagem from '../../Assets/imagem.svg';
+import Imagem from '../../Assets/forgot.svg';
 
 
 
@@ -20,6 +20,8 @@ background-color: #eeeeee;
 
 export const FirstContent = styled.div`
 display: flex;
+justify-content: center;
+align-items: center;
 height: 80%;
 width: 80%;
 border-radius: 15px;
@@ -28,18 +30,19 @@ box-shadow: 4px 3px 3px ${darken(0.1, "#000")};
 `;
 
 
-// COLUNA LOGIN
+// FORGOT PASSWORD
 
 export const FirstColumn = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-width: 50%;
-height: 100%;
+width: 40%;
+height: 60%;
 background-color: #00adb5;
 border-radius: 15px;
 box-shadow: 4px 3px 3px ${darken(0.1, "#000")};
+position: absolute;
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
@@ -50,6 +53,11 @@ h2 {
     color: #fff;
     padding-bottom: 15px;
     {text-shadow: 0.1em 0.1em 0.05em #333};
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 form{
@@ -67,7 +75,7 @@ label{
 input{
     border-radius: 7px;
     border: none;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
     padding: 10px;
 
     ::-webkit-input-placeholder{
@@ -83,28 +91,13 @@ input{
 `;
 
 
-// REMEMBER
-
-export const Remember = styled.div`
-display: flex;
-align-items: center;
-
-
-label{
-font-size: 12px;
-padding-bottom: 4px;
-color: #fff;
-}
-`;
-
-
 // BUTTON
 
 export const MyButton = styled.button`
 border-radius: 7px;
 border: none;
 cursor: pointer;
-margin: 0 80px 0 80px;
+margin: 0 90px 0 90px;
 padding: 8px;
 
 button{
@@ -115,32 +108,9 @@ cursor: pointer;
 `;
 
 
-// FORGOT
+// LOGIN
 
-export const Forgot = styled.div`
-display: flex;
-justify-items: center;
-align-items: center;;
-padding-top: 30px;
-
-span{
-font-size: 12px;
-font-weight: bold;
-padding-right: 10px;
-padding-left: 85px;
-}
-
-a{
-font-size: 12px;
-color: #fff;
-text-decoration:none; 
-}
-`;
-
-
-// CREATE ACOUNT
-
-export const CreateAccount = styled.div`
+export const Login = styled.div`
 display: flex;
 justify-items: center;
 align-items: center;;
@@ -150,7 +120,7 @@ span{
 font-size: 12px;
 font-weight: bold;
 padding-right: 10px;
-padding-left: 90px;
+padding-left: 120px;
 }
 
 a{
@@ -161,15 +131,12 @@ text-decoration:none;
 `; 
 
 
-/* COLUNA IMAGEM */
+// /* COLUNA IMAGEM */
 
 export const SecondColumn = styled.div`
-width: 50%;
+width: 100%;
 height: 100%;
 border-radius: 15px;
 background-image: url(${Imagem});
-background-repeat: no-repeat;
-position:;
-top: 500px;
-left: 750px;
+background-repeat:;
 `;
