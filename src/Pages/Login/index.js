@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, FirstContent, FirstColumn, Remember, MyButton, Forgot, CreateAccount, SecondColumn } from  './style';
+import { Container, FirstContent, FirstColumn, Remember, MyButton, CreateAccount, SecondColumn } from  './style';
 import { Link } from 'react-router-dom';
 
 function Login() {
@@ -52,13 +52,6 @@ function Login() {
                                      <button>Sign in</button>
                                     </Link>
                                 </MyButton>
-
-                                <Forgot>
-                                    <span>Forgot</span>
-                                    <Link to="/Forgot">
-                                     <strong>Username / password?</strong>
-                                    </Link>
-                                </Forgot>
 
                                 <CreateAccount>
                                     <span>Create an account?</span>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import Padrao from '../Pages/Padrao/index';
 import Login from '../Pages/Login/index';
 import Home from '../Pages/Home/index';
 import Forgot from '../Pages/ForgotPassword/index';
@@ -12,12 +13,11 @@ function Routes() {
 
         <Switch>
             
-            <Route path={"/Login"} exact component={Login} />
+            <Route path={"/"} exact component={Padrao} />
+            <Route path={"/Login"} component={Login} />
             <Route path={"/Home"} component={Home} />
             <Route path={"/Forgot"} component={Forgot} />
             <Route path={"/CreateAccount"} component={CreateAccount} />
-
-
 
         </Switch>
     );

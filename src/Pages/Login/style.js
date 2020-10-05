@@ -115,48 +115,27 @@ cursor: pointer;
 `;
 
 
-// FORGOT
-
-export const Forgot = styled.div`
-display: flex;
-justify-items: center;
-align-items: center;;
-padding-top: 30px;
-
-span{
-font-size: 12px;
-font-weight: bold;
-padding-right: 10px;
-padding-left: 85px;
-}
-
-a{
-font-size: 12px;
-color: #fff;
-text-decoration:none; 
-}
-`;
-
-
 // CREATE ACOUNT
 
 export const CreateAccount = styled.div`
 display: flex;
 justify-items: center;
 align-items: center;;
-padding-top: 20px;
+padding-top: 35px;
 
 span{
 font-size: 12px;
 font-weight: bold;
 padding-right: 10px;
-padding-left: 90px;
+padding-left: 75px;
+text-transform: uppercase;
 }
 
 a{
 font-size: 12px;
 color: #fff;
-text-decoration:none; 
+text-decoration:none;
+text-transform: uppercase;
 }
 `; 
 

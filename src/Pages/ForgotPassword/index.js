@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, FirstContent, FirstColumn, MyButton, Forgot, Login, SecondColumn } from  './style';
+import { Container, FirstContent, FirstColumn, MyButton, Login, SecondColumn } from  './style';
 import { Link } from 'react-router-dom';
 
 function ForgotPassword() {
