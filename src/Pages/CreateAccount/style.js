@@ -76,6 +76,7 @@ label{
 input{
     border-radius: 7px;
     border: none;
+    outline: 0;
     margin-bottom: 8px;
     padding: 10px;
 
@@ -98,6 +99,7 @@ button{
     margin: 0 80px 0 80px;
     padding: 8px;
     margin-top: 15px;
+    outline: 0;
 }
 `;
 

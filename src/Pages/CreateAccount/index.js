@@ -1,15 +1,36 @@
-import React, { useState, } from 'react';
+import React, { useState } from 'react';
+import Api from '../../Services/Api/index';
+import { Link, useHistory } from 'react-router-dom';
 import { Container, FirstContent, FirstColumn, Terms, Log, SecondColumn } from  './style';
-import { Link } from 'react-router-dom';
 
-function CreateAccount() {
+
+const CreateAccount = () => {
 
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [repeatPassword, setRepeatPassword] = useState('');
     const [checkbox, setCheckbox] = useState('');
+    const history = useHistory();
 
+    function handleSubmit(event) {
+        event.preventDefault();
+        createUser();
+    }
+
+    function createUser() {
+        Api.post("/users", {name: username, email, password}).then(res => {
+            if(res.data.id){
+                history.push("/Login")
+            }
+            else {
+                alert("It was not possible to register the user")
+            }
+        }, err => {
+                alert("E-mail already exists")
+            })
+    }
+
+    
     return (
 
         <Container>
@@ -23,7 +44,8 @@ function CreateAccount() {
                     <SecondColumn>
                         <h2>CREATE ACCOUNT</h2>
                         
-                        <form>
+                        <form onSubmit={handleSubmit}>
+
                             <label htmlFor="username"></label>
                              
                                 <input
@@ -32,13 +54,14 @@ function CreateAccount() {
                                  placeholder= "Username"
                                  value={username}
                                  onChange={(event) => setUsername(event.target.value)}
+                                 required
                                 />
 
                             <label htmlFor="email"></label>
                                 <input
-                                 placeholder="E-mail"
                                  id="email"
                                  type="email"
+                                 placeholder="E-mail"
                                  value={email}
                                  onChange={(event) => setEmail(event.target.value)}
                                 />
@@ -50,15 +73,6 @@ function CreateAccount() {
                                  type="password"
                                  value={password}
                                  onChange={(event) => setPassword(event.target.value)}
-                                />
-
-                            <label htmlFor="repeatPassword"></label>
-                                <input
-                                 placeholder="Repeat Password"
-                                 id="repeatPassword"
-                                 type="password"
-                                 value={repeatPassword}
-                                 onChange={(event) => setRepeatPassword(event.target.value)}
                                 />
 
                                 <Terms>
@@ -74,7 +88,6 @@ function CreateAccount() {
                                <button>Sign up</button>
                                
                                <Log>
-                                   
                                     <span>already have an account?</span>
                                     <Link to="/Login">
                                      <strong>log in!</strong>
@@ -88,6 +101,8 @@ function CreateAccount() {
 
         </Container>
     );
+    
+
 }
 
-export default CreateAccount; 
+export default CreateAccount;

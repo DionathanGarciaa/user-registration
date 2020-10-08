@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
-import { Container, FirstContent, FirstColumn, Remember, MyButton, CreateAccount, SecondColumn } from  './style';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import api from '../../Services/Api/index';
+import Api from '../../Services/Api/index';
+import { Container, FirstContent, FirstColumn, Remember, MyButton, CreateAccount, SecondColumn } from  './style';
+
 
 function Login() {
 
@@ -8,6 +11,7 @@ function Login() {
     const [passwordLogin, setPasswordLogin] = useState('');
     const [checkbox, setCheckbox] = useState('');
 
+   
        return (
 
         <Container>

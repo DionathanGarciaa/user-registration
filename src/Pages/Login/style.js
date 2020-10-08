@@ -67,8 +67,10 @@ label{
 input{
     border-radius: 7px;
     border: none;
+    outline: 0;
     margin-bottom: 8px;
     padding: 10px;
+    
 
     ::-webkit-input-placeholder{
     color:#000;
@@ -106,11 +108,14 @@ border: none;
 cursor: pointer;
 margin: 0 80px 0 80px;
 padding: 8px;
+outline: 0;
+
 
 button{
+width: 100%;
 border: none;
 cursor: pointer;
-
+outline: 0;
 }
 `;
 
