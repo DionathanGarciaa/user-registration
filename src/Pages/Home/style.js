@@ -49,7 +49,6 @@ span{
     width: 100%;
     color: #fff;
     text-transform: uppercase;
-    text-decoration: underline;
     padding-top: 15px;
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Api from '../../Services/Api/index';
 import { Link, useHistory } from 'react-router-dom';
+import Api from '../../Services/Api/index';
 import { Container, FirstContent, FirstColumn, Terms, Log, SecondColumn } from  './style';
 
 
@@ -42,7 +42,7 @@ const CreateAccount = () => {
                     </FirstColumn>
 
                     <SecondColumn>
-                        <h2>CREATE ACCOUNT</h2>
+                        <h2>Criar Conta</h2>
                         
                         <form onSubmit={handleSubmit}>
 
@@ -51,7 +51,7 @@ const CreateAccount = () => {
                                 <input
                                  id="username"
                                  type="text"
-                                 placeholder= "Username"
+                                 placeholder= "Nome"
                                  value={username}
                                  onChange={(event) => setUsername(event.target.value)}
                                  required
@@ -68,7 +68,7 @@ const CreateAccount = () => {
 
                             <label htmlFor="password"></label>
                                 <input
-                                 placeholder="Password"
+                                 placeholder="Senha"
                                  id="password"
                                  type="password"
                                  value={password}
@@ -82,15 +82,15 @@ const CreateAccount = () => {
                                      value={checkbox}
                                      onChange={(event) => setCheckbox(event.target.value)}
                                     /> 
-                                    <label htmlFor="checkbox">I agree to the Terms of user</label>
+                                    <label htmlFor="checkbox">Concordo com os termos de usuário</label>
                                 </Terms>
 
-                               <button>Sign up</button>
+                               <button type="submit">Escreva-se</button>
                                
                                <Log>
-                                    <span>already have an account?</span>
+                                    <span>já tem uma conta?</span>
                                     <Link to="/Login">
-                                     <strong>log in!</strong>
+                                     <strong>Conecte-se</strong>
                                     </Link>
                                 </Log>
 

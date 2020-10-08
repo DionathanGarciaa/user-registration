@@ -1,40 +1,58 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import api from '../../Services/Api/index';
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import Api from '../../Services/Api/index';
 import { Container, FirstContent, FirstColumn, Remember, MyButton, CreateAccount, SecondColumn } from  './style';
 
 
-function Login() {
+const Login = () => {
 
     const [login, setLogin] = useState('');
     const [passwordLogin, setPasswordLogin] = useState('');
     const [checkbox, setCheckbox] = useState('');
+    const history = useHistory();
 
+    function handleSubmit(event) {
+        event.preventDefault();
+        loginUser();
+    }
    
-       return (
+    function loginUser() {
+        Api.post("/sessions", {email: login, password: passwordLogin}).then(res => {
+            if(res.data.token){
+                history.push("/Home")
+            }
+            else {
+                alert("User not found")
+            }
+        }, err => {
+                alert("E-mail already exists")
+            })
+    }
+
+
+    return (
 
         <Container>
 
             <FirstContent>
                 
                     <FirstColumn>
-                        <h2>Login</h2>
+                        <h2>Conecte-se</h2>
                         
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <label htmlFor="login"></label>
                              
                                 <input
                                  id="login"
                                  type="email"
-                                 placeholder= "Username"
+                                 placeholder= "E-mail"
                                  value={login}
                                  onChange={(event) => setLogin(event.target.value)}
                                 />
 
                             <label htmlFor="passwordLogin"></label>
                                 <input
-                                 placeholder="********"
+                                 placeholder="Senha"
                                  id="passwordLogin"
                                  type="password"
                                  value={passwordLogin}
@@ -48,19 +66,19 @@ function Login() {
                                  value={checkbox}
                                  onChange={(event) => setCheckbox(event.target.value)}
                                  /> 
-                                 <label htmlFor="checkbox">Remember</label>
+                                 <label htmlFor="checkbox">Lembrar</label>
                                 </Remember>
 
                                 <MyButton>
-                                    <Link to="/Home">
-                                     <button>Sign in</button>
-                                    </Link>
+                        
+                                     <button type="submit">Entrar</button>
+                                    
                                 </MyButton>
 
                                 <CreateAccount>
-                                    <span>Create an account?</span>
+                                    <span>Criar uma conta?</span>
                                     <Link to="/CreateAccount">
-                                     <strong>Sign up</strong>
+                                     <strong>inscrever-se</strong>
                                     </Link>
                                 </CreateAccount>
                         </form>

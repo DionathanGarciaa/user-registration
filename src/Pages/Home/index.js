@@ -9,13 +9,13 @@ function Home() {
       <Container>
 
         <Header>
-            <span>product</span>
+            <span>Bem-Vindo</span>
         </Header>
 
         <ProductExt>
 
           <Product>
-            <span>product list</span>
+            <span>Lista de produtos</span>
           </Product>
 
         </ProductExt>
