@@ -18,7 +18,11 @@ const CreateAccount = () => {
     }
 
     function createUser() {
-        Api.post("/users", {name: username, email, password}).then(res => {
+        Api.post("/users", {
+            name: username, 
+            email, 
+            password
+        }).then(res => {
             if(res.data.id){
                 history.push("/Login")
             }

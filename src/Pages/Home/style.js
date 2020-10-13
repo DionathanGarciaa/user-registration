@@ -10,6 +10,9 @@ background-color: #eeeeee;
 
 
 export const Header = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
 background: #00adb5;
 padding: 20px;
 text-align: center;
@@ -27,6 +30,28 @@ span{
 `;
 
 
+export const HeaderContent = styled.div`
+display: flex;
+position: absolute;
+left: 1400px;
+
+p{
+    padding: 0 5px 0 10px;
+    color: #fff;
+}
+
+a{
+color: #fff;
+text-decoration:none;
+text-transform: uppercase;
+
+strong{
+    font-size: 15px;
+}
+}
+`;
+
+
 export const ProductExt = styled.div`
 display: flex;
 align-items: center;
@@ -35,34 +60,108 @@ height: 655px;
 `;
 
 
-export const Product = styled.div`
+export const ProductInt = styled.div`
 display: flex;
+flex-direction: column;
+text-align: center;
 height: 70%;
 width: 80%;
 border-radius: 15px;
 background-color: #393e46;
 box-shadow: 4px 3px 3px ${darken(0.1, "#000")};
-text-align: center;
 
 span{
     text-align: center;
-    width: 100%;
-    color: #fff;
     text-transform: uppercase;
     padding-top: 15px;
+    width: 100%;
+    color: #fff;
 }
-
 `;
 
 
+export const Product = styled.div`
+display: flex;
+flex-direction: column;
+height: 100%;
+background:;
+`;
 
 
+export const Card = styled.div`
+display:flex;
+width: 35%;
+padding:30px;
+margin: 25px 0 0 25px;
+box-shadow: 0 0 10px 0px #000;
+background-color: #00adb5;
+color: #000;
+border-radius: 15px;
+`;
 
 
+export const CardLogo = styled.div`
+display:flex;
+justify-content: center;
+width: 30%;
+margin-right: 25px;
+border-style: double;
+border-color: #fff;
+padding-top: 10px;
+
+strong{
+display: flex;
+color: #fff;
+}
+`;
 
 
+export const CardText = styled.div`
+display: flex;
+flex-direction: column;
+font-family: Arial, Helvetica, sans-serif;
+
+strong{
+display: flex;
+color: #fff;
+margin-bottom: 10px;
+}
+
+input{
+margin-bottom: 10px;
+padding: 0 60px 10px 0;
+border-radius: 8px;
+border: none;
+outline: 0;
+}
+
+textarea{
+padding: 15px 60px 20px 10px;
+border-radius: 8px;
+border: none;
+outline: 0;
+}
+`;
+
+export const CardIcons = styled.div`
+display: flex;
+justify-content: center;
+flex-direction: column;
+padding-left: 25px;
+margin-top: 30px; 
+`;
 
 
+export const Icons = styled.div`
+padding-bottom: 10px;
+
+
+svg{
+outline: none;
+border: none;
+cursor: pointer;
+}
+`;
 
 
 

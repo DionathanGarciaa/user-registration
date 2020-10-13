@@ -11,21 +11,24 @@ const Login = () => {
     const [checkbox, setCheckbox] = useState('');
     const history = useHistory();
 
+
     function handleSubmit(event) {
         event.preventDefault();
         loginUser();
     }
    
     function loginUser() {
-        Api.post("/sessions", {email: login, password: passwordLogin}).then(res => {
-            if(res.data.token){
+        Api.post("/sessions", {email: login, password: passwordLogin}).then(response => {
+            if(response.data.token){ 
+                sessionStorage.setItem("token", response.data.token)
+                
                 history.push("/Home")
             }
             else {
-                alert("User not found")
+                alert("Preencha corretamente os campos")
             }
         }, err => {
-                alert("E-mail already exists")
+                alert("Usuário não encontrado")
             })
     }
 
@@ -59,20 +62,18 @@ const Login = () => {
                                  onChange={(event) => setPasswordLogin(event.target.value)}
                                 />
 
-                                <Remember>
-                                 <input 
-                                 id="checkbox"
-                                 type="checkbox"
-                                 value={checkbox}
-                                 onChange={(event) => setCheckbox(event.target.value)}
-                                 /> 
-                                 <label htmlFor="checkbox">Lembrar</label>
-                                </Remember>
+                            <Remember>
+                                <input 
+                                    id="checkbox"
+                                    type="checkbox"
+                                    value={checkbox}
+                                    onChange={(event) => setCheckbox(event.target.value)}
+                                /> 
+                            <label htmlFor="checkbox">Lembrar</label>
+                            </Remember>
 
                                 <MyButton>
-                        
                                      <button type="submit">Entrar</button>
-                                    
                                 </MyButton>
 
                                 <CreateAccount>
