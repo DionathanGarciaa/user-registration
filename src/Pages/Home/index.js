@@ -9,7 +9,29 @@ const Home = () => {
   const [productName, setUProductName] = useState('');
   const [productDescription, setProductDescription] = useState('');
   const [productLogo, setProductLogo] = useState('');
+  // const [productManual, setProductManual] = useState('');
   const [productId, setProductId] = useState('');
+
+
+  // LOGO
+  const ProductLogo  = (event) => {
+    let file = event.target.files[0];
+    let reader = new FileReader();
+    reader.onloadend = function(e) {
+      setProductLogo(reader.result);
+    }
+    reader.readAsDataURL(file);
+  }
+
+  // MANUAL
+  // const ProductManual = (event) => {
+  //   let file = event.target.files[0];
+  //   let reader = new FileReader();
+  //   reader.onloadend = function(e) {
+  //     setProductManual(reader.result);
+  //   }
+  //   reader.readAsDataURL(file);
+  // }
 
 
   // CRIAR PRODUTO
@@ -103,7 +125,17 @@ const Home = () => {
                 <Card>
 
                   <CardLogo>
-                    <strong>Logo</strong>
+                    <label htmlFor="productLogo"> <strong>Logo</strong> </label>
+                      <input
+                        id="productLogo"
+                        type="file"
+                        accept="image/*"
+                        name="productLogo"
+                        placeholder="Logo"
+                        onChange={(event) => {
+                        productLogo(event);
+                        }}
+                      />
                   </CardLogo>
 
                   <CardText>
