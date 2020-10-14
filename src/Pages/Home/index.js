@@ -9,44 +9,18 @@ const Home = () => {
   const [productName, setUProductName] = useState('');
   const [productDescription, setProductDescription] = useState('');
   const [productLogo, setProductLogo] = useState('');
-  // const [productManual, setProductManual] = useState('');
   const [productId, setProductId] = useState('');
 
-
-  // LOGO
-  const ProductLogo  = (event) => {
-    let file = event.target.files[0];
-    let reader = new FileReader();
-    reader.onloadend = function(e) {
-      setProductLogo(reader.result);
-    }
-    reader.readAsDataURL(file);
-  }
-
-  // MANUAL
-  // const ProductManual = (event) => {
-  //   let file = event.target.files[0];
-  //   let reader = new FileReader();
-  //   reader.onloadend = function(e) {
-  //     setProductManual(reader.result);
-  //   }
-  //   reader.readAsDataURL(file);
-  // }
-
-
-  // CRIAR PRODUTO
+  
+  // CADASTRAR PRODUTO
     function createProduct() {
-      const token = sessionStorage.getItem("token")
-      const autho = {
-        headers:{ Authorization: `Bearer ${token}`}
-      };
-      const bodyParameters = {
-       name: productName, descricao: productDescription, logo: productLogo
-      };
-
-      Api.post("/products", bodyParameters, autho).then(response => {
-        if(response.data.name){
-          alert("Item cadastrado")
+      Api.post('/products', {productName, productDescription, productLogo}, {
+        headers: {
+          Authorization: 'Bearer ' + sessionStorage.getItem('token')
+        }
+      }).then(response => {
+        if(response.data.id){
+          console.log(response)
         }
         else {
           alert("Preencha os campos corretamente")
@@ -66,7 +40,7 @@ const Home = () => {
       };
 
       Api.put("/products/id", bodyParameters, autho).then(response => {
-        if(response.data.name){
+        if(response.data.id){
           alert("Item alterado com sucesso")
         }
         else {
@@ -101,10 +75,13 @@ const Home = () => {
     return (
 
       <Container>
+
+
           <Header>
             <span>Bem-Vindo</span>
 
             <HeaderContent>
+
               <Link to="/UserInformation">
                 <strong>Informações Pessoais</strong>
               </Link>
@@ -114,72 +91,43 @@ const Home = () => {
               <Link to="/Login">
                 <strong>Sair</strong>
               </Link>
+
             </HeaderContent>
           </Header>
 
+
+
+
           <ProductExt>
             <ProductInt>
-              <span>Lista de produtos</span>
               
               <Product>
                 <Card>
+                  <Link to="/CreateProduct">
+                  <button>Cadastrar produto</button>
+                  </Link>
+                </Card>
 
-                  <CardLogo>
-                    <label htmlFor="productLogo"> <strong>Logo</strong> </label>
-                      <input
-                        id="productLogo"
-                        type="file"
-                        accept="image/*"
-                        name="productLogo"
-                        placeholder="Logo"
-                        onChange={(event) => {
-                        productLogo(event);
-                        }}
-                      />
-                  </CardLogo>
+                <Card>
+                  <button>Editar produto</button>
+                </Card>
 
-                  <CardText>
-                    <form>
-                      <label htmlFor="productName"><strong>Produto</strong></label>    
-                        <input
-                          id="productName"
-                          type="text"
-                          value={productName}
-                          onChange={(event) => setUProductName(event.target.value)}   
-                        />
+                <Card>
+                  <button>Excluir produto</button>
+                </Card>
 
-                      <label htmlFor="productDescription"><strong>Descrição</strong></label>
-                        <textarea
-                          id="productDescription"
-                          type="text"
-                          value={productDescription}
-                          onChange={(event) => setProductDescription(event.target.value)}   
-                        />
-                    </form>
-                  </CardText>
-
-                  <CardIcons>
-                    <Icons>
-                        <IoIosAddCircleOutline onClick={createProduct} fontSize={25} color='#fff'/>
-                    </Icons>
-
-                    <Icons>
-                        <IoMdCreate onclick={editProduct} fontSize={25} color='#fff'/>
-                    </Icons>
-
-                    <Icons>
-                        <IoMdCloseCircleOutline onclick={deleteProduct}  fontSize={25} color='#fff'/>
-                    </Icons>
-                  </CardIcons>
-
+                <Card>
+                  <button>Listar produto</button>
                 </Card>
               </Product>
               
             </ProductInt>
           </ProductExt>
 
-      </Container>
 
+
+
+      </Container>
     );
   };
 

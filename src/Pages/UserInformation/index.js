@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { IoIosHome } from 'react-icons/io'
 import Api from '../../Services/Api/index';
 import { Container, FirstContent, FirstColumn, MyButton, Back, SecondColumn } from  './style';
 
@@ -39,7 +40,7 @@ const UserInformation = () => {
 
     
     return (
-
+        
         <Container>
             <FirstContent>
                 <FirstColumn>
@@ -79,7 +80,7 @@ const UserInformation = () => {
 
                         <Back>
                             <Link to="/Home">
-                                <strong>Home</strong>
+                                <IoIosHome font-size={25}>Home</IoIosHome>
                             </Link>
                         </Back>
                         
