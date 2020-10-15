@@ -6,6 +6,8 @@ import CreateAccount from "../Pages/CreateAccount";
 import Home from "../Pages/Home/index";
 import UserInformation from "../Pages/UserInformation/index";
 import CreateProduct from "../Pages/CreateProduct/index";
+import ProductList from "../Pages/ProductList/index";
+
 
 
 
@@ -21,6 +23,8 @@ function Routes() {
             <Route path={"/CreateAccount"} component={CreateAccount} />
             <Route path={"/UserInformation"} component={UserInformation} />
             <Route path={"/CreateProduct"} component={CreateProduct} />
+            <Route path={"/ProductList"} component={ProductList} />
+
 
 
         </Switch>
