@@ -11,7 +11,6 @@ const Login = () => {
     const [checkbox, setCheckbox] = useState('');
     const history = useHistory();
 
-
     function handleSubmit(event) {
         event.preventDefault();
         loginUser();
@@ -21,7 +20,6 @@ const Login = () => {
         Api.post("/sessions", {email: login, password: passwordLogin}).then(response => {
             if(response.data.token){ 
                 sessionStorage.setItem("token", response.data.token)
-                
                 history.push("/Home")
             }
             else {
@@ -32,19 +30,14 @@ const Login = () => {
             })
     }
 
-
     return (
-
         <Container>
-
             <FirstContent>
-                
                     <FirstColumn>
                         <h2>Conecte-se</h2>
                         
                         <form onSubmit={handleSubmit}>
                             <label htmlFor="login"></label>
-                             
                                 <input
                                  id="login"
                                  type="email"
@@ -64,10 +57,10 @@ const Login = () => {
 
                             <Remember>
                                 <input 
-                                    id="checkbox"
-                                    type="checkbox"
-                                    value={checkbox}
-                                    onChange={(event) => setCheckbox(event.target.value)}
+                                 id="checkbox"
+                                 type="checkbox"
+                                 value={checkbox}
+                                 onChange={(event) => setCheckbox(event.target.value)}
                                 /> 
                             <label htmlFor="checkbox">Lembrar</label>
                             </Remember>
@@ -90,7 +83,6 @@ const Login = () => {
                     </SecondColumn>
 
             </FirstContent>
-
         </Container>
     );
 }

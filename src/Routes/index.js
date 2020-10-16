@@ -5,10 +5,9 @@ import Login from "../Pages/Login/index";
 import CreateAccount from "../Pages/CreateAccount";
 import Home from "../Pages/Home/index";
 import UserInformation from "../Pages/UserInformation/index";
-import CreateProduct from "../Pages/CreateProduct/index";
+import CreateProduct from "../Pages/ProductCreate/index";
 import ProductList from "../Pages/ProductList/index";
-
-
+import ProductEdit from '../Pages/productEdit/index';
 
 
 function Routes() {
@@ -16,7 +15,6 @@ function Routes() {
     return (
 
         <Switch>
-            
             <Route path={"/"} exact component={Padrao} />
             <Route path={"/Login"} component={Login} />
             <Route path={"/Home"} component={Home} />
@@ -24,9 +22,7 @@ function Routes() {
             <Route path={"/UserInformation"} component={UserInformation} />
             <Route path={"/CreateProduct"} component={CreateProduct} />
             <Route path={"/ProductList"} component={ProductList} />
-
-
-
+            <Route path={"/ProductEdit"} component={ProductEdit} />
         </Switch>
     );
 }

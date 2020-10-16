@@ -11,23 +11,19 @@ const UserInformation = () => {
     const [emailUser, setEmailUser] = useState('');
     const [passwordUser, setPasswordUser] = useState('');
 
-
     function handleSubmit(event) {
         event.preventDefault();
         confirm();
     }
    
-
     function confirm() {
-        
-    const token = sessionStorage.getItem("token")
-    const autho = {
-        headers:{ Authorization: `Bearer ${token}`}
-    };
-    const bodyParameters = {
-        name: nameUser, email: emailUser, password: passwordUser
-    };
 
+        const token = sessionStorage.getItem("token")
+        const autho = { headers:{ Authorization: `Bearer ${token}`}
+        };
+        const bodyParameters = {
+            name: nameUser, email: emailUser, password: passwordUser
+        };
         Api.put("/users", bodyParameters, autho).then(response => {
             if(response.data.name){
                 alert("Cadastro atualizado")
@@ -38,9 +34,7 @@ const UserInformation = () => {
         })
     }
 
-    
     return (
-        
         <Container>
             <FirstContent>
                 <FirstColumn>

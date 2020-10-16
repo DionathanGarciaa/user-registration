@@ -1,21 +1,19 @@
 import styled from 'styled-components';
-import { darken } from 'polished';
-
 
 
 export const Container = styled.div`
-height: 100%;
-background-color: #eeeeee;
+    height: 100%;
+    background-color: #eeeeee;
 `;
 
 
 export const Header = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-background: #00adb5;
-padding: 20px;
-text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00adb5;
+    padding: 20px;
+    text-align: center;
 
 span{
     font-family: Arial, Helvetica, sans-serif;
@@ -31,9 +29,9 @@ span{
 
 
 export const HeaderContent = styled.div`
-display: flex;
-position: absolute;
-left: 1200px;
+    display: flex;
+    position: absolute;
+    left: 1200px;
 
 p{
     padding: 0 5px 0 10px;
@@ -41,9 +39,9 @@ p{
 }
 
 a{
-color: #fff;
-text-decoration:none;
-text-transform: uppercase;
+    color: #fff;
+    text-decoration:none;
+    text-transform: uppercase;
 
 strong{
     font-size: 15px;
@@ -53,140 +51,75 @@ strong{
 
 
 export const ProductExt = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-height: 655px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 655px;
 `;
 
 
 export const ProductInt = styled.div`
-display: flex;
-flex-direction: column;
-text-align: center;
-height: 70%;
-width: 60%;
-border-radius: 15px;
-background-color: #393e46;
-box-shadow: 4px 3px 3px ${darken(0.1, "#000")};
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 70%;
+    width: 60%;
+    border-radius: 15px;
+    background-color: #eeeeee;
 `;
 
 
 export const Product = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-height: 100%;
-background:;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 `;
 
 
 export const Card = styled.div`
-display:flex;
-width: 35%;
-margin: 20px 0 5px 25px;
-box-shadow: 0 0 10px 0px #000;
-background-color: #00adb5;
-color: #000;
-border-radius: 15px;
+    height: 300px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #393e46;
+    margin-left: 25px;
+`;
 
-a{
+
+export const CardIcone = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    background-color: #00adb5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+`;
+
+
+export const CardConteudo = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
-}
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    {text-shadow: 0.1em 0.1em 0.05em #333};
+    color: #fff;
 
-button{
-height: 100%;
-width: 100%;
-flex-direction: column;
-align-items: center;
-background-color: #00adb5;
-padding: 25px;
-border-radius: 15px;
-font-size: 20px;
-color: #fff;
-border: none;
-outline: 0;
-cursor: pointer;
-}
-`;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export const CardLogo = styled.div`
-display:flex;
-justify-content: center;
-width: 30%;
-margin-right: 25px;
-border-style: double;
-border-color: #fff;
-padding-top: 10px;
-
-strong{
-display: flex;
-color: #fff;
+a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-decoration:none;
+    color: #fff;
 }
 `;
-
-
-export const CardText = styled.div`
-display: flex;
-flex-direction: column;
-font-family: Arial, Helvetica, sans-serif;
-
-strong{
-display: flex;
-color: #fff;
-margin-bottom: 10px;
-}
-
-input{
-margin-bottom: 10px;
-padding: 0 60px 10px 0;
-border-radius: 8px;
-border: none;
-outline: 0;
-}
-
-textarea{
-padding: 15px 60px 20px 10px;
-border-radius: 8px;
-border: none;
-outline: 0;
-}
-`;
-
-export const CardIcons = styled.div`
-display: flex;
-justify-content: center;
-flex-direction: column;
-padding-left: 25px;
-margin-top: 30px; 
-`;
-
-
-export const Icons = styled.div`
-padding-bottom: 10px;
-
-
-svg{
-outline: none;
-border: none;
-cursor: pointer;
-}
-`;
-
-
-

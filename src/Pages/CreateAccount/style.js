@@ -3,52 +3,49 @@ import { darken } from 'polished';
 import Imagem from '../../Assets/imagem.svg';
 
 
-
 // EXTERNO
-
 export const Container = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-height: 100vh;
-background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #eeeeee;
 `;
+
 
 // INTERNO
-
 export const FirstContent = styled.div`
-display: flex;
-height: 80%;
-width: 80%;
-border-radius: 15px;
-background-color: #393e46;
-box-shadow: 4px 3px 3px ${darken(0.1, "#000")};
+    display: flex;
+    height: 80%;
+    width: 80%;
+    border-radius: 15px;
+    background-color: #393e46;
+    box-shadow: 4px 3px 3px ${darken(0.1, "#000")};
 `;
 
-// COLUNA IMAGEM
 
+// COLUNA IMAGEM
 export const FirstColumn = styled.div`
-width: 50%;
-height: 100%;
-border-radius: 15px;
-background-image: url(${Imagem});
-background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+    background-image: url(${Imagem});
+    background-repeat: no-repeat;
 `;
 
 
 /* COLUNA CREATE ACCOUNT*/
-
 export const SecondColumn = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-width: 50%;
-height: 100%;
-background-color: #00adb5;
-border-radius: 15px;
-box-shadow: 4px 3px 3px ${darken(0.1, "#000")};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-color: #00adb5;
+    border-radius: 15px;
+    box-shadow: 4px 3px 3px ${darken(0.1, "#000")};
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
@@ -105,35 +102,31 @@ button{
 
 
 // TERMS
-
 export const Terms = styled.div`
-display: flex;
-align-items: center;
-
+    display: flex;
+    align-items: center;
 
 label{
 font-size: 12px;
 padding-bottom: 8px;
-
 color: #fff;
 }
 `;
 
-// LOG IN
 
+// LOG IN
 export const Log = styled.div`
-display: flex;
-justify-items: center;
-align-items: center;;
-padding-top: 40px;
+    display: flex;
+    justify-items: center;
+    align-items: center;;
+    padding-top: 40px;
 
 span{
-font-size: 12px;
-padding-right: 10px;
-padding-left: 60px;
-text-transform: uppercase; 
-font-weight: bold;
-
+    font-size: 12px;
+    padding-right: 10px;
+    padding-left: 60px;
+    text-transform: uppercase; 
+    font-weight: bold;
 }
 
 a{

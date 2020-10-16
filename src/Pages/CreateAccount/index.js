@@ -18,11 +18,7 @@ const CreateAccount = () => {
     }
 
     function createUser() {
-        Api.post("/users", {
-            name: username, 
-            email, 
-            password
-        }).then(res => {
+        Api.post("/users", { name: username, email, password }).then(res => {
             if(res.data.id){
                 history.push("/Login")
             }
@@ -34,13 +30,9 @@ const CreateAccount = () => {
             })
     }
 
-    
     return (
-
         <Container>
-
             <FirstContent>
-                
                     <FirstColumn>
                         {/* imagem */}
                     </FirstColumn>
@@ -49,9 +41,7 @@ const CreateAccount = () => {
                         <h2>Criar Conta</h2>
                         
                         <form onSubmit={handleSubmit}>
-
                             <label htmlFor="username"></label>
-                             
                                 <input
                                  id="username"
                                  type="text"
@@ -100,13 +90,9 @@ const CreateAccount = () => {
 
                         </form>
                     </SecondColumn>
-
             </FirstContent>
-
         </Container>
     );
-    
-
 }
 
 export default CreateAccount;

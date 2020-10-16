@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 
-
 export const Container = styled.div`
     height: 100%;
     background-color: #eeeeee;
@@ -57,6 +56,8 @@ export const ProductExt = styled.div`
     align-items: center;
     justify-content: center;
     height: 655px;
+
+   
 `;
 
 
@@ -66,7 +67,7 @@ export const ProductInt = styled.div`
     text-align: center;
     align-items: center;
     justify-content: center;
-    height: 70%;
+    height: 80%;
     width: 80%;
     border-radius: 15px;
     background-color: #393e46;
@@ -101,31 +102,44 @@ button{
 }
 `;
 
+
 export const Listar = styled.div`
-    display:flex;
-    height: 70%;
-    width: 55%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 80%;
+    width: 95%;
     margin: 30px 0 0 25px;
-    box-shadow: 0 0 10px 0px #000;
-    background-color: #00adb5;
+    background-color: #393e46;
     color: #000;
     border-radius: 15px;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+    ::-webkit-scrollbar {
+    width: 15px;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #00aeb5;
+    border-radius: 5px;
+  }
 `;
+
 
 export const Card = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 25%;
-    width: 25%;
-    padding-left: px;
-    margin: 20px;
-    background: #fff;
+    height: 70px;
+    width: 300px;
+    margin: 10px;
+    background: #00adb5;
+    color: #fff;
     border: ridge;
-    border-color: #00adb5;
-   
-
-span{
-   
-}
+    border-color: #fff;
 `;

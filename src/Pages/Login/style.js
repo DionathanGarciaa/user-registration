@@ -3,9 +3,7 @@ import { darken } from 'polished';
 import Imagem from '../../Assets/imagem.svg';
 
 
-
 // EXTERNO
-
 export const Container = styled.div`
     display: flex;
     justify-content: center;
@@ -17,7 +15,6 @@ export const Container = styled.div`
 
 
 // INTERNO
-
 export const FirstContent = styled.div`
     display: flex;
     height: 80%;
@@ -29,7 +26,6 @@ export const FirstContent = styled.div`
 
 
 // COLUNA LOGIN
-
 export const FirstColumn = styled.div`
     display: flex;
     justify-content: center;
@@ -71,7 +67,6 @@ input{
     margin-bottom: 8px;
     padding: 10px;
     
-
     ::-webkit-input-placeholder{
     color:#000;
     text-align: center;
@@ -86,11 +81,9 @@ input{
 
 
 // REMEMBER
-
 export const Remember = styled.div`
     display: flex;
     align-items: center;
-
 
 label{
     font-size: 12px;
@@ -101,7 +94,6 @@ label{
 
 
 // BUTTON
-
 export const MyButton = styled.button`
     border-radius: 7px;
     border: none;
@@ -120,19 +112,19 @@ button{
 
 
 // CREATE ACOUNT
-
 export const CreateAccount = styled.div`
     display: flex;
     justify-items: center;
     align-items: center;;
     padding-top: 35px;
-
+    
 span{
     font-size: 12px;
     font-weight: bold;
-    padding-right: 10px;
-    padding-left: 75px;
+    padding-right: 15px;
+    padding-left: 55px;
     text-transform: uppercase;
+    color: #fff;
 }
 
 a{
@@ -145,7 +137,6 @@ a{
 
 
 /* COLUNA IMAGEM */
-
 export const SecondColumn = styled.div`
     width: 50%;
     height: 100%;

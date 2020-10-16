@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 
-
 export const Container = styled.div`
     height: 100%;
     background-color: #eeeeee;
@@ -65,7 +64,7 @@ export const ProductInt = styled.div`
     flex-direction: column;
     text-align: center;
     height: 70%;
-    width: 80%;
+    width: 50%;
     border-radius: 15px;
     background-color: #393e46;
     box-shadow: 4px 3px 3px ${darken(0.1, "#000")};
@@ -84,8 +83,7 @@ export const Product = styled.div`
 export const Card = styled.div`
     display:flex;
     height: 70%;
-    width: 55%;
-    margin: 30px 0 0 25px;
+    width: 80%;
     box-shadow: 0 0 10px 0px #000;
     background-color: #00adb5;
     color: #000;
@@ -100,7 +98,7 @@ form{
 label{
     display: flex;
     align-items: center;
-    margin: 5px 0 2px 25px ;
+    margin: 10px 0 2px 25px ;
     {text-shadow: 0.1em 0.1em 0.05em #333};
     color: #fff;
 }
@@ -112,7 +110,6 @@ input{
     margin: 5px 0 2px 25px ;
     padding: 5px;
    
-
     ::-webkit-file-upload-button {
         border-radius: 7px;
         outline: 0;
@@ -129,7 +126,6 @@ input{
     text-align: center;
     }
 }
-
 
 button{
     flex-direction: column;
@@ -188,6 +184,7 @@ textarea{
 }
 `;
 
+
 export const CardIcons = styled.div`
     display: flex;
     justify-content: center;
@@ -200,13 +197,9 @@ export const CardIcons = styled.div`
 export const Icons = styled.div`
     padding-bottom: 10px;
 
-
 svg{
     outline: none;
     border: none;
     cursor: pointer;
 }
 `;
-
-
-

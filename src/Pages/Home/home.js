@@ -29,25 +29,25 @@
 //     }
 
 
-//     // EDITAR PRODUTO
-//     function editProduct() {
-//       const token = sessionStorage.getItem("token")
-//       const autho = {
-//         headers:{ Authorization: `Bearer ${token}`}
-//       };
-//       const bodyParameters = {
-//        name: productName, descricao: productDescription, logo: productLogo
-//       };
+    // // EDITAR PRODUTO
+    // function editProduct() {
+    //   const token = sessionStorage.getItem("token")
+    //   const autho = {
+    //     headers:{ Authorization: `Bearer ${token}`}
+    //   };
+    //   const bodyParameters = {
+    //    name: productName, descricao: productDescription, logo: productLogo
+    //   };
 
-//       Api.put("/products/id", bodyParameters, autho).then(response => {
-//         if(response.data.id){
-//           alert("Item alterado com sucesso")
-//         }
-//         else {
-//           alert("Preencha os campos corretamente")
-//         }
-//       })
-//     }
+    //   Api.put("/products/id", bodyParameters, autho).then(response => {
+    //     if(response.data.id){
+    //       alert("Item alterado com sucesso")
+    //     }
+    //     else {
+    //       alert("Preencha os campos corretamente")
+    //     }
+    //   })
+    // }
 
 
 //     // DELETAR PRODUTO
