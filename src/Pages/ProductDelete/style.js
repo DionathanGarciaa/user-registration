@@ -102,38 +102,29 @@ export const CardIcone = styled.div`
 
 export const Card = styled.div`
     display:flex;
-    justify-content: space-between;
-    background: #393e46;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
 `;
 
 
-export const CardLeft = styled.div`
+export const CardTop = styled.div`
     display:flex;
-    height: 100%;
-    width: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
     color: #000;
     background-color: #393e46;
-
-form{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-}
-
-label{
-    display: flex;
-    align-items: center;
-    margin: 10px 0 2px 25px ;
-    {text-shadow: 0.1em 0.1em 0.05em #333};
-    color: #fff;
-}
 
 input{
     border-radius: 7px;
     border: none;
     outline: 0;
-    margin: 5px 0 20px 25px ;
-    padding: 5px;
+    margin: 5px 0 10px 0 ;
+    padding: 5px 100px 5px 0;
 
     ::-webkit-input-placeholder{
     color:#000;
@@ -147,12 +138,11 @@ input{
 }
 
 button{
-    flex-direction: column;
-    align-items: center;
-    margin: 5px 0 2px 25px ;
+    width: 15%;
+    border-radius: 8px;
+    margin: 0 0 2px 25px ;
     padding: 5px;
     background-color: #fff;
-    border-radius: 8px;
     color: #00aeb5;
     outline: 0;
     cursor: pointer;
@@ -160,7 +150,7 @@ button{
 `;
 
 
-export const CardRight = styled.div`
+export const CardBottom = styled.div`
     display:flex;
     flex-direction: column;
     width: 50%;
@@ -174,10 +164,8 @@ export const Buscar = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
-    margin-left: 70px;
-    height: 25%;
-    width: 50%;
+    margin-top: 50px;
+    width: 100%;
 
 input{
     border-bottom-left-radius: 7px;
@@ -196,18 +184,20 @@ input{
     text-align: center;
     }
 }
+`;
 
+export const MyButtom = styled.div`
 button{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 1px;
     border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
+    border-bottom-right-radius: 7px;    
     border: none;
-    background: #fff;
     outline: 0;
     cursor: pointer;
-
+    background: #fff;
 }
 `;
 
@@ -217,9 +207,7 @@ export const List = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 150px;
-    width: 300px;
-    margin: 10px;
+    margin-top: 20px;
     background: #00adb5;
     color: #fff;
     border: ridge;

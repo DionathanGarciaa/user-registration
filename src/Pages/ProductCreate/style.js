@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { darken } from 'polished';
 
 
 export const Container = styled.div`
     height: 100%;
     background-color: #eeeeee;
+
 `;
 
 
@@ -23,7 +23,6 @@ span{
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #fff;
-    padding-bottom: 15px;
     {text-shadow: 0.1em 0.1em 0.05em #333};
 }
 `;
@@ -55,7 +54,9 @@ export const ProductExt = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 655px;
+    height: 625px;
+    padding-top: 60px;
+    padding-bottom: 65px;
 `;
 
 
@@ -66,8 +67,7 @@ export const ProductInt = styled.div`
     height: 70%;
     width: 50%;
     border-radius: 15px;
-    background-color: #393e46;
-    box-shadow: 4px 3px 3px ${darken(0.1, "#000")};
+    background-color: #eeeeee;
 `;
 
 
@@ -80,14 +80,37 @@ export const Product = styled.div`
 `;
 
 
+export const CardAll = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    width: 700px;
+    border-radius: 10px;
+    background-color: #393e46;
+    box-shadow: 0 0 10px 0px #000;
+`;
+
+
+export const CardExt = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    background-color: #00adb5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+`;
+
 export const Card = styled.div`
     display:flex;
     height: 70%;
-    width: 80%;
-    box-shadow: 0 0 10px 0px #000;
-    background-color: #00adb5;
+    width: 100%;
+    background-color: #393e46;
     color: #000;
-    border-radius: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 
 form{
     display: flex;
@@ -141,65 +164,11 @@ button{
 `;
 
 
-export const CardLogo = styled.div`
-    display:flex;
+export const Footer = styled.div`
+    display: flex;
+    align-items: center;
     justify-content: center;
-    width: 30%;
-    margin-right: 25px;
-    border-style: double;
-    border-color: #fff;
-    padding-top: 10px;
-
-strong{
-    display: flex;
-    color: #fff;
-}
-`;
-
-
-export const CardText = styled.div`
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
-
-strong{
-    display: flex;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-input{
-    margin-bottom: 10px;
-    padding: 0 60px 10px 0;
-    border-radius: 8px;
-    border: none;
-    outline: 0;
-}
-
-textarea{
-    padding: 15px 60px 20px 10px;
-    border-radius: 8px;
-    border: none;
-    outline: 0;
-}
-`;
-
-
-export const CardIcons = styled.div`
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 25px;
-    margin-top: 30px; 
-`;
-
-
-export const Icons = styled.div`
-    padding-bottom: 10px;
-
-svg{
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
+    background: #00adb5;
+    padding: 15px;
+    text-align: center;
 `;

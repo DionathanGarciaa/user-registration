@@ -23,7 +23,6 @@ span{
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #fff;
-    padding-bottom: 15px;
     {text-shadow: 0.1em 0.1em 0.05em #333};
 }
 `;
@@ -55,9 +54,7 @@ export const ProductExt = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 655px;
-
-   
+    height: 625px;
 `;
 
 
@@ -70,13 +67,38 @@ export const ProductInt = styled.div`
     height: 80%;
     width: 80%;
     border-radius: 15px;
+    background-color: #eeeeee;
+`;
+
+
+export const CardAll = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    width: 700px;
+    border-radius: 10px;
     background-color: #393e46;
-    box-shadow: 4px 3px 3px ${darken(0.1, "#000")};
+    box-shadow: 0 0 10px 0px #000;
+`;
+
+
+export const CardIcone = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    width: 100%;
+    background-color: #00adb5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 `;
 
 
 export const Buscar = styled.div`
     display:flex;
+    align-items: center;
+    justify-content: center;
     height: 10%;
     width: 25%;
 
@@ -84,6 +106,7 @@ input{
     border-radius: 7px;
     border: none;
     outline: 0;
+    padding-top: 15px;
     padding-right: 50px;
     margin: 15px 0 1px 15px ;
 
@@ -142,4 +165,14 @@ export const Card = styled.div`
     color: #fff;
     border: ridge;
     border-color: #fff;
+`;
+
+
+export const Footer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00adb5;
+    padding: 15px;
+    text-align: center;
 `;

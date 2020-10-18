@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import swal from 'sweetalert';
+import Api from '../../Services/Api/index';
 import { Link } from 'react-router-dom';
 import { IoIosHome } from 'react-icons/io'
-import Api from '../../Services/Api/index';
 import { Container, FirstContent, FirstColumn, MyButton, Back, SecondColumn } from  './style';
 
 
@@ -26,11 +27,25 @@ const UserInformation = () => {
         };
         Api.put("/users", bodyParameters, autho).then(response => {
             if(response.data.name){
-                alert("Cadastro atualizado")
+                swal({
+                    title: "",
+                    text: "Cadastro atualizado",
+                    icon: "success",
+                  });
             }
             else {
-                alert("Preencha os campos corretamente")
+                swal({
+                    title: "",
+                    text: "Preencha os campos corretamente",
+                    icon: "error",
+                  });
             }
+        }, err => {
+            swal({
+                title: "Ops!",
+                text: "Preencha os campos corretamente",
+                icon: "error",
+            });
         })
     }
 

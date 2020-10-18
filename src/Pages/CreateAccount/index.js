@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
 import Api from '../../Services/Api/index';
+import swal from 'sweetalert';
+import { Link, useHistory } from 'react-router-dom';
 import { Container, FirstContent, FirstColumn, Terms, Log, SecondColumn } from  './style';
 
 
@@ -20,13 +21,26 @@ const CreateAccount = () => {
     function createUser() {
         Api.post("/users", { name: username, email, password }).then(res => {
             if(res.data.id){
+                swal({
+                    title: "Parabéns!",
+                    text: "Usuário cadastrado",
+                    icon: "success",
+                  });
                 history.push("/Login")
+            } else {
+                swal({
+                    title: "Ops!",
+                    text: "Usuário já cadastrado",
+                    icon: "error",
+                  });
             }
-            else {
-                alert("It was not possible to register the user")
-            }
+            
         }, err => {
-                alert("E-mail already exists")
+            swal({
+                title: "Ops!",
+                text: "Usuário já cadastrado",
+                icon: "error",
+              });
             })
     }
 
@@ -75,6 +89,7 @@ const CreateAccount = () => {
                                      type="checkbox"
                                      value={checkbox}
                                      onChange={(event) => setCheckbox(event.target.value)}
+                                     required
                                     /> 
                                     <label htmlFor="checkbox">Concordo com os termos de usuário</label>
                                 </Terms>

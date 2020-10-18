@@ -127,6 +127,7 @@ span{
     padding-left: 60px;
     text-transform: uppercase; 
     font-weight: bold;
+    color: #fff;
 }
 
 a{

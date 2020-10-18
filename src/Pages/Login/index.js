@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
 import Api from '../../Services/Api/index';
+import swal from 'sweetalert';
+import { Link, useHistory } from 'react-router-dom';
 import { Container, FirstContent, FirstColumn, Remember, MyButton, CreateAccount, SecondColumn } from  './style';
 
 
@@ -18,15 +19,23 @@ const Login = () => {
    
     function loginUser() {
         Api.post("/sessions", {email: login, password: passwordLogin}).then(response => {
-            if(response.data.token){ 
+            if(response.data.token){
                 sessionStorage.setItem("token", response.data.token)
                 history.push("/Home")
             }
             else {
-                alert("Preencha corretamente os campos")
+                swal({
+                    title: "Ops",
+                    text: "Usuário não existe",
+                    icon: "error",
+                });
             }
         }, err => {
-                alert("Usuário não encontrado")
+            swal({
+                title: "Ops!",
+                text: "Usuário não cadastrado",
+                icon: "error",
+              });
             })
     }
 
@@ -34,6 +43,7 @@ const Login = () => {
         <Container>
             <FirstContent>
                     <FirstColumn>
+                       
                         <h2>Conecte-se</h2>
                         
                         <form onSubmit={handleSubmit}>

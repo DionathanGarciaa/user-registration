@@ -8,6 +8,7 @@ import UserInformation from "../Pages/UserInformation/index";
 import CreateProduct from "../Pages/ProductCreate/index";
 import ProductList from "../Pages/ProductList/index";
 import ProductEdit from '../Pages/productEdit/index';
+import ProductDelete from '../Pages/ProductDelete/index';
 
 
 function Routes() {
@@ -23,6 +24,7 @@ function Routes() {
             <Route path={"/CreateProduct"} component={CreateProduct} />
             <Route path={"/ProductList"} component={ProductList} />
             <Route path={"/ProductEdit"} component={ProductEdit} />
+            <Route path={"/ProductDelete"} component={ProductDelete} />
         </Switch>
     );
 }

@@ -1,7 +1,8 @@
 import React  from 'react';
-import { MdAddShoppingCart, MdModeEdit, MdDelete, MdFormatListBulleted } from 'react-icons/md';
+import swal from 'sweetalert';
 import { Link } from 'react-router-dom';
-import { Container, Header, HeaderContent, ProductExt, ProductInt, Product, Card, CardIcone, CardConteudo } from './style';
+import { MdAddShoppingCart, MdModeEdit, MdDelete, MdFormatListBulleted } from 'react-icons/md';
+import { Container, Header, HeaderContent, ProductExt, ProductInt, Product, Card, CardIcone, CardConteudo, Footer } from './style';
 
 
 const Home = () => {
@@ -60,7 +61,7 @@ const Home = () => {
                 <MdDelete fontSize={30} color="#fff"/>
               </CardIcone>
               <CardConteudo>
-                <Link to="/Productedit">
+                <Link to="/ProductDelete">
                   <span>excluir produto</span>
                 </Link>
               </CardConteudo>
@@ -81,7 +82,8 @@ const Home = () => {
           </Product>
         </ProductInt>
       </ProductExt>
-          
+      <Footer>
+      </Footer>
     </Container>
   );
 };

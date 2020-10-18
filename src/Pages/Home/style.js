@@ -54,7 +54,9 @@ export const ProductExt = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 655px;
+    height: 610px;
+    padding-top: 60px;
+    padding-bottom: 65px;
 `;
 
 
@@ -123,3 +125,13 @@ a{
     color: #fff;
 }
 `;
+
+
+export const Footer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00adb5;
+    padding: 15px;
+    text-align: center;
+    `;
